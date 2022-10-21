@@ -1,4 +1,4 @@
-lista_elements = [
+'''lista_elements = [
     {
         "id": 1,
         "name": "Francisco",
@@ -9,7 +9,11 @@ lista_elements = [
         "name": "Pedro",
         "last_name": "Perez"
     }
-]
+]'''
+
+import json
+with open('elemento.json', 'r') as file:
+    lista_elements =json.load(file)
 
 def add_element():
     id = int(input('Ingresa el ID de la persona: '))
