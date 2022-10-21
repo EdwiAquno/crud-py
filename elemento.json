@@ -6,7 +6,17 @@
     },
     {
         "id": 2,
-        "name": "Pedro",
-        "last_name": "Perez"
+        "name": "bruce",
+        "last_name": "wain"
+    },
+    {
+        "id": 3,
+        "name": "omar",
+        "last_name": "fuentes"
+    },
+    {
+        "id": 4,
+        "name": "diana",
+        "last_name": "cuevas"
     }
 ]

@@ -12,6 +12,7 @@
 ]'''
 
 import json
+from xml.dom.minidom import Identified
 with open('elemento.json', 'r') as file:
     lista_elements =json.load(file)
 
@@ -25,6 +26,7 @@ def add_element():
         "last_name": last_name
     }
     lista_elements.append(person)
+    guardar_lista()
 
 def remove_element():
     id = int(input('Ingresa el ID del elemento a Eliminar: '))
@@ -35,6 +37,7 @@ def remove_element():
         if aceptar == "S":
             lista_elements.remove(found)
             print("Elemento Eliminado")
+            guardar_lista()
     else:
         print(f"El elemento  no existe{id} no existe")
 
@@ -64,6 +67,7 @@ def edit_element():
             lista_elements[index]['name'] = name
         if last_name != '':
             lista_elements[index]['last_name'] = last_name
+            guardar_lista()
     else:
         print(f"El elemento  no existe{id} no existe")        
 
@@ -76,6 +80,10 @@ def edit_element():
     }
     lista_elements.remove(found)
     lista_elements.append(person)'''
+
+def guardar_lista():
+    with open('elemto.json', 'w') as file:
+        json.dump(lista_elements, file, Indent=4)
 
 if __name__ == '__main__':
     menu = '''
